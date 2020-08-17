@@ -1,0 +1,12 @@
+ja:
+  models:
+    books: 書籍
+  attributes:
+    id: ID
+    title: タイトル
+    memo: メモ
+    author: 著者
+    picture: イメージ
+    postcode: 郵便番号 
+    address: 住所
+    profile: プロフィール
