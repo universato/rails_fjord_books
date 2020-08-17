@@ -1,9 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  memo: MyText
+  title: すべてがFになる
+  memo: メフィスト賞第1回受賞作
+  author: 森博嗣
 
 two:
-  title: MyString
-  memo: MyText
+  title: コズミック
+  memo: メフィスト賞第2回受賞作
+  author: 清涼飲料水
