@@ -1,14 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>タイトル：</strong>
   <%= @book.title %>
 </p>
 
 <p>
-  <strong>Memo:</strong>
+  <strong>メモ：</strong>
   <%= @book.memo %>
 </p>
 
-<%= link_to 'Edit', edit_book_path(@book) %> |
-<%= link_to 'Back', books_path %>
+<p>
+  <strong>著者：</strong>
+  <%= @book.author %>
+</p>
+
+<p>
+  <strong>イメージ:</strong>
+  <%= image_tag(@book.picture_url) if @book.picture.present? %>
+</p>
+
+<%= link_to '編集する', edit_book_path(@book) %> |
+<%= link_to '書籍の一覧へ戻る', books_path %>
