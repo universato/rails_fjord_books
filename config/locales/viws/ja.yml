@@ -1,0 +1,11 @@
+ja:
+  books:
+    index:
+      title: 書籍の一覧画面
+    show:
+      title: 書籍の閲覧画面
+    new:
+      title: 書籍の新規作成画面
+    edit:
+      title: 書籍の編集画面
+    

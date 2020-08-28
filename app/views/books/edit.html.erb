@@ -1,6 +1,6 @@
-<h1>書籍の編集画面</h1>
+<h1><%= t(".title") %></h1>
 
 <%= render 'form', book: @book %>
 
-<%= link_to '詳細画面に行く', @book %> |
-<%= link_to '全体閲覧画面に行く', books_path %>
+<%= link_to t(:show,  scope: %i[dictionary button]), @book %> |
+<%= link_to t(:index, scope: %i[dictionary button]), books_path %>

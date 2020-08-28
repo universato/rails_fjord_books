@@ -1,5 +1,5 @@
-<h1>書籍を新規作成する</h1>
+<h1><%= t(".title") %></h1>
 
 <%= render 'form', book: @book %>
 
-<%= link_to '書籍の一覧へ戻る', books_path %>
+<%= link_to t(:index, scope: %i[dictionary button]), books_path %>
