@@ -2,6 +2,14 @@
 
 <h1>書籍</h1>
 
+<%= paginate @books, window: 2 %>
+
+<br>
+
+<%= page_entries_info @books %>
+
+<br><br>
+
 <table>
   <thead>
     <tr>
@@ -25,6 +33,10 @@
     <% end %>
   </tbody>
 </table>
+
+<br>
+
+<%= paginate @books, window: 2 %>
 
 <br>
 
