@@ -3,7 +3,6 @@ ja:
     models:
       book: 書籍
       user: ユーザー 
-      book: 書籍
     attributes:
         user:
           id: ID
