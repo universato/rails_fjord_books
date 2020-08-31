@@ -26,7 +26,7 @@ class BooksController < ApplicationController
     @book = Book.new(book_params)
 
     if @book.save
-      redirect_to @book, notice: "書籍が新規作例されました"
+      redirect_to @book, notice: t("flash.create", obj: Book.model_name.human)
     else
       render :new
     end
@@ -35,7 +35,7 @@ class BooksController < ApplicationController
   # PATCH/PUT /books/1
   def update
     if @book.update(book_params)
-      redirect_to @book, notice: "書籍は更新されました"
+      redirect_to @book, notice: t("flash.update", obj: @book.title)
     else
       render :edit
     end
@@ -44,7 +44,7 @@ class BooksController < ApplicationController
   # DELETE /books/1
   def destroy
     @book.destroy
-    redirect_to books_url, notice: "書籍は削除されました"
+    redirect_to books_url, notice: t("flash.destroy", obj: @book.title)
   end
 
   private
