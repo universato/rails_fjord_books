@@ -1,0 +1,15 @@
+ja:
+  flash:
+    create:  "%{obj}を新規作成しました"
+    update:  "%{obj}を更新しました"
+    destroy: "%{obj}を削除しました"
+  confirm:
+    delete: 本当に削除しますか
+  dictionary:
+    title: タイトル
+    button:
+      index:  一覧画面へ
+      new:    新規作成する
+      edit:   編集する
+      show:   詳細画面へ
+      delete: 削除する
