@@ -28,7 +28,7 @@
         <td><%= book.author %></td>
         <td><%= link_to t(:show, scope: %i[dictionary button]), book %></td>
         <td><%= link_to t(:edit, scope: %i[dictionary button]), edit_book_path(book) %></td>
-        <td><%= link_to t(:delete, scope: %i[dictionary button]), book, method: :delete, data: { confirm: link_to t(:delete, scope: %i[confirm]) } %></td>
+        <td><%= link_to t(:delete, scope: %i[dictionary button]), book, method: :delete, data: { confirm: t(:delete, scope: %i[confirm]) } %></td>
       </tr>
     <% end %>
   </tbody>
