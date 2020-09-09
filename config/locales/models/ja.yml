@@ -5,11 +5,12 @@ ja:
       user: ユーザー 
     attributes:
         user:
-          id: ID
-          email: メールアドレス
+          id:       ID
+          email:    メールアドレス
           postcode: 郵便番号
-          address: 住所
-          profile: プロフィール
+          address:  住所
+          profile:  プロフィール
+          icon:     アイコン
           crypted_password: パスワード
         book:
           id:       ID

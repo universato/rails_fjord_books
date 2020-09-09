@@ -6,3 +6,18 @@ ja:
     sessions:
       new:
         title: "ログイン画面"
+  users:
+    index:
+      title: ユーザー一覧画面
+    show:
+      title: ユーザー詳細画面
+  books:
+    index:
+      title: 書籍の一覧画面
+    show:
+      title: 書籍の閲覧画面
+    new:
+      title: 書籍の新規作成画面
+    edit:
+      title: 書籍の編集画面
+  

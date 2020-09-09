@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>ユーザー一覧</h1>
+
+<br><br>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= User.human_attribute_name(:email) %></th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.email %></td>
+        <td><%= link_to t(:show, scope: %i[dictionary button]), user %></td>
+        <td><%= link_to t(:delete, scope: %i[dictionary button]), user, method: :delete, data: { confirm: t(:delete, scope: %i[confirm]) } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<% if user_signed_in? %>
+  <%= link_to "ログアウトする", destroy_user_session_url, method: :delete %>
+<% else %>
+  <%= link_to "ログイン画面へ",user_session_url %>
+<% end %>
