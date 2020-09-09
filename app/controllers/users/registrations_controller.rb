@@ -1,10 +1,6 @@
 # frozen_string_literal: true
 
 class Users::RegistrationsController < Devise::RegistrationsController
-  # def create
-  #   super
-  #   icon.attach(icon)
-  # end
   before_action :configure_permitted_parameters, only: [:create]
 
   def after_sign_up_path_for(_)
