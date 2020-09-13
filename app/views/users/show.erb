@@ -15,4 +15,9 @@
   <% end %>
 </p>
 
+<% if @user == current_user %>
+  <%= link_to t(:delete, scope: %i[dictionary button]), current_user, method: :delete, data: { confirm: t(:delete, scope: %i[confirm]) } %>
+  <br>
+<% end %>
+
 <%= link_to t(:index, scope: %i[dictionary button]), users_path %>
