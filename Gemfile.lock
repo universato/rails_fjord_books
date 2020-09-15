@@ -274,6 +274,7 @@ DEPENDENCIES
   devise
   devise-i18n
   dotenv-rails
+  image_processing
   jbuilder (~> 2.7)
   kaminari
   listen (~> 3.2)
