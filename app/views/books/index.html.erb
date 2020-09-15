@@ -40,9 +40,4 @@
 
 <%= link_to t(:new, scope: %i[dictionary button]), new_book_path %>
 
-<% if user_signed_in? %>
-  <%= link_to "ログアウトする", destroy_user_session_url, method: :delete %>
-<% else %>
-  <%= link_to "ログイン画面へ", user_session_url %>
-  <%= link_to "GitHubでログインする", user_github_omniauth_authorize_path %>
-<% end %>
+<br>

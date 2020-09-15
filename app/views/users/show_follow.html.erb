@@ -1,0 +1,11 @@
+<h1><%= "#{@title}一覧" %></h1>
+
+<%= "#{@users.size}人の#{@title}です" %> <br>
+
+<% @users.each do |user| %>
+
+  <%= link_to user.email, user %> <br>
+
+<% end %>
+
+<br> <br>
