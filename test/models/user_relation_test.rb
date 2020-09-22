@@ -11,10 +11,11 @@ class UserRelationTest < ActiveSupport::TestCase
   end
 
   def test_null_user
-    follow = UserRelation.new(follower_id: 1, followed_id: nil)
+    user1 = users(:one)
+    follow = UserRelation.new(follower_id: user1.id, followed_id: nil)
     assert follow.invalid?
   end
-  
+
   def test_self_follow
     follow = UserRelation.new(follower_id: 1, followed_id: 1)
     assert follow.invalid?
