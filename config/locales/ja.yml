@@ -13,3 +13,10 @@ ja:
       edit:   編集する
       show:   詳細画面へ
       delete: 削除する
+      follow: フォローする
+      unfollow: フォロー解除する
+      books_index: 書籍の一覧
+      users_index: ユーザーの一覧
+      login_with_github: GitHubでログインする
+      logout: ログアウトする
+      users_edit: プロフィール編集 
