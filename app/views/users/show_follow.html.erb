@@ -1,6 +1,6 @@
-<h1><%= "#{@title}一覧" %></h1>
+<h1><%= t(:index_of, scope: %i[dictionary], obj: @title) %></h1>
 
-<%= "#{@users.size}人の#{@title}です" %> <br>
+<%= t(:count_people_state, scope: %i[dictionary], obj: @title, count: @users.size) %> <br>
 
 <% @users.each do |user| %>
 

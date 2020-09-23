@@ -20,14 +20,14 @@ class UsersController < ApplicationController
 
 
   def following
-    @title = "フォロー"
+    @title = t("dictionary.follow")
     @user  = User.find(params[:id])
     @users = @user.following
     render "show_follow"
   end
 
   def followers
-    @title = "フォロワー"
+    @title = t("dictionary.follower")
     @user  = User.find(params[:id])
     @users = @user.followers
     render "show_follow"

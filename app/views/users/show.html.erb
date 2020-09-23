@@ -9,8 +9,8 @@
   <%= render 'follow_form' %> <br>
 <% end %>
 
-<%= link_to "フォロワー一覧", followers_user_path(@user) %> <br>
-<%= link_to "フォロー一覧", following_user_path(@user) %> <br>
+<%= link_to t(:followers, scope: %i[dictionary button]), followers_user_path(@user) %> <br>
+<%= link_to t(:followings, scope: %i[dictionary button]), following_user_path(@user) %> <br>
 
 <br> <br>
 
