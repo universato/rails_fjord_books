@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 n  = 10
-start_id = Book.last.id
+start_id = Book.count.zero? ? 0 : Book.last.id
 
 n.times do |diff|
   id = start_id + diff
@@ -12,7 +12,7 @@ n.times do |diff|
 end
 
 n  = 100
-start_id = User.last.id
+start_id = User.count.zero? ? 0 : User.last.id
 
 n.times do |diff|
   id = start_id + diff
