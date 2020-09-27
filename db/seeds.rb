@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-n  = 100
+n  = 10
 start_id = Book.count.zero? ? 0 : Book.last.id
 
 n.times do |diff|

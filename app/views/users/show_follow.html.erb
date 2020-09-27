@@ -1,0 +1,11 @@
+<h1><%= t(:index_of, scope: %i[dictionary], obj: @title) %></h1>
+
+<%= t(:count_people_state, scope: %i[dictionary], obj: @title, count: @users.size) %> <br>
+
+<% @users.each do |user| %>
+
+  <%= link_to user.email, user %> <br>
+
+<% end %>
+
+<br> <br>

@@ -7,9 +7,22 @@ ja:
     delete: 本当に削除しますか
   dictionary:
     title: タイトル
+    follow: フォロー
+    follower: フォロワー
+    index_of: "%{obj}一覧"
+    count_people_state: "%{count}人の%{obj}です"
     button:
       index:  一覧画面へ
       new:    新規作成する
       edit:   編集する
       show:   詳細画面へ
       delete: 削除する
+      follow: フォローする
+      unfollow: フォロー解除する
+      followers: フォロワーの一覧
+      followings: フォローの一覧
+      books_index: 書籍の一覧
+      users_index: ユーザーの一覧
+      login_with_github: GitHubでログインする
+      logout: ログアウトする
+      users_edit: プロフィール編集 
