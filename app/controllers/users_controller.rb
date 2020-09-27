@@ -10,11 +10,27 @@ class UsersController < ApplicationController
 
   # GET /users/1
   def show
+    @user = User.find(params[:id])
   end
 
   def destroy
     current_user.destroy
     redirect_to users_path
+  end
+
+
+  def following
+    @title = t("dictionary.follow")
+    @user  = User.find(params[:id])
+    @users = @user.following
+    render "show_follow"
+  end
+
+  def followers
+    @title = t("dictionary.follower")
+    @user  = User.find(params[:id])
+    @users = @user.followers
+    render "show_follow"
   end
 
   private

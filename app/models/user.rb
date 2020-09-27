@@ -1,7 +1,26 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
+  has_many :active_user_relations, class_name: "UserRelation", foreign_key: "follower_id", dependent: :destroy
+  has_many :passive_user_relations, class_name: "UserRelation", foreign_key: "followed_id", dependent: :destroy
+  has_many :following, through: :active_user_relations, source: :followed
+  has_many :followers, through: :passive_user_relations, source: :follower
+
+
+  def follow(other_user)
+    following << other_user
+  end
+
+  def unfollow(other_user)
+    active_user_relations.find_by!(followed_id: other_user.id).destroy
+  end
+
+  def following?(other_user)
+    following.include?(other_user)
+  end
+
   has_one_attached :icon
+
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable

@@ -5,14 +5,14 @@
   <%= @user.email %>
 </p>
 
-<p>
-  <strong><%= User.human_attribute_name(:icon) %>:</strong><br>
-  <% if @user.icon.attached? %>
-    <%= image_tag @user.icon.variant(resize: "200x200") %>
-  <% else %>
-    <p> まだアイコンはありません </p> <br>
-  <% end %>
-</p>
+<% if user_signed_in? and current_user != @user %>
+  <%= render 'follow_form' %> <br>
+<% end %>
+
+<%= link_to t(:followers, scope: %i[dictionary button]), followers_user_path(@user) %> <br>
+<%= link_to t(:followings, scope: %i[dictionary button]), following_user_path(@user) %> <br>
+
+<br> <br>
 
 <% if @user == current_user %>
   <%= link_to t(:delete, scope: %i[dictionary button]), current_user, method: :delete, data: { confirm: t(:delete, scope: %i[confirm]) } %>
