@@ -9,6 +9,10 @@ one:
   postcode: "000-0000"
   address: "Tokyo Chiyoda-ku Otemachi x-x-x"
   profile: "hoge fuga piyo puyo dayo"
+  provider: test
+  uid: 1
 
 two:
   email: "two@example.com"
+  provider: test
+  uid: 2

@@ -22,11 +22,12 @@
 
     <br>　<br>
 
+    <%= link_to "日報の一覧へ", reports_url %>　<br>
     <%= link_to "書籍の一覧", books_url %>  <br>
     <%= link_to "ユーザーの一覧", users_url %>  <br>　<br>  
 
     <% if user_signed_in? %>
-      
+      <%= link_to "日報を作成する", new_report_url %>
       <%= link_to "ログアウトする", destroy_user_session_url, method: :delete %>
       <%= link_to "プロフィール編集", edit_user_registration_url %>
     <% else %>
