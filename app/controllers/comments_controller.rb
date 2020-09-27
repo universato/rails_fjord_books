@@ -11,12 +11,6 @@ class CommentsController < ApplicationController
     redirect_to @commentable
   end
 
-  def destroy
-    @comment = Comment.find(params[:id])
-    @comment.destroy
-    redirect_to report_url(@comment.report)
-  end
-
   private
     def set_commentable
       resource, id = request.path.split("/")[1, 2]
