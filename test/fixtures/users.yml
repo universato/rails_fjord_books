@@ -5,7 +5,7 @@
 # below each fixture, per the syntax in the comments below
 
 one:
-  email: "one@example.com"
+  email: "alice@example.com"
   postcode: "000-0000"
   address: "Tokyo Chiyoda-ku Otemachi x-x-x"
   profile: "hoge fuga piyo puyo dayo"
@@ -13,6 +13,6 @@ one:
   uid: 1
 
 two:
-  email: "two@example.com"
+  email: "bob@example.com"
   provider: test
   uid: 2
