@@ -1,0 +1,19 @@
+<h1>日報の一覧画面</h1>
+
+<table>
+  <thead>
+   <th>タイトル</th>
+   <th>日付</th>
+   <th>作成者</th>
+  </thead>
+  <tbody>
+    <% @reports.each do |report| %>
+    <tr>
+      <td><%= link_to report.title, report %></td>
+      <td><%= link_to report.reported_on, report %></td>
+      <td><%= link_to report.user.email, report.user %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
