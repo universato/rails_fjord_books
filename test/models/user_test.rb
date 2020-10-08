@@ -34,7 +34,6 @@ class UserTest < ActiveSupport::TestCase
           uid: "123456789",
           info: {
                   email: email,
-                  # pasword: "password"
                 },
         })
 

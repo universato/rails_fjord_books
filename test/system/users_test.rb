@@ -9,7 +9,6 @@ class UsersTest < ApplicationSystemTestCase
           uid: "123456789",
           info: {
                   email: "githubmock@example.com",
-                  pasword: "password"
                 },
         })
 
