@@ -28,17 +28,23 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "from_omniauth" do
-    email = "githubnewuser@example.com"
+    provider = "github"
+    uid      = "123456789"
+    email    = "githubnewuser@example.com"
+
     auth = OmniAuth::AuthHash.new({
-          provider: "github",
-          uid: "123456789",
+          provider: provider,
+          uid: uid,
           info: {
                   email: email,
                 },
         })
 
     user = User.from_omniauth(auth)
+
     assert user.valid?
-    assert_equal email, user.email
+    assert_equal provider, user.provider
+    assert_equal uid,      user.uid
+    assert_equal email,    user.email
   end
 end
