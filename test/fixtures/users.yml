@@ -5,14 +5,30 @@
 # below each fixture, per the syntax in the comments below
 
 one:
-  email: "one@example.com"
-  postcode: "000-0000"
+  email: one@example.com
+  postcode: 000-0000
   address: "Tokyo Chiyoda-ku Otemachi x-x-x"
   profile: "hoge fuga piyo puyo dayo"
-  provider: "test"
+  provider: test
   uid: 1
 
 two:
-  email: "two@example.com"
-  provider: "test"
-  uid: 50
+  email: two@example.com
+  provider: test
+  uid: 2
+
+alice:
+  email: alice@example.com
+  postcode: "222-2222"
+  address: "Tokyo Chiyoda-ku Otemachi x-x-x"
+  profile: "hoge fuga piyo puyo dayo"
+  provider: test
+  uid: 3
+
+bob:
+  email: bob@example.com
+  postcode: 111-1111
+  address: "Tokyo Chiyoda-ku Otemachi x-x-x"
+  profile: "hoge fuga piyo puyo dayo"
+  provider: test
+  uid: 4

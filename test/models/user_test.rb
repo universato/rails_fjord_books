@@ -3,20 +3,27 @@
 require "test_helper"
 
 class UserTest < ActiveSupport::TestCase
-  test "valid the book" do
-    @user = users(:one)
+  def setup
+    @alice = users(:alice)
+    @bob = users(:bob)
+    @bob_follow_alice =  UserRelation.create!(follower_id: users(:bob).id,
+                                              followed_id: users(:alice).id)
+  end
+
+  test "valid user" do
+    @user = users(:alice)
     assert @user.valid?
   end
 
-  test "valid follow, unfollow, following?" do
-    @user = users(:one)
-    @other_user = users(:two)
-    assert_not @user.following?(@other_user)
+  test "follow and following?" do
+    assert_not @alice.following?(@bob)
+    @alice.follow(@bob)
+    assert @alice.following?(@bob)
+  end
 
-    @user.follow(@other_user)
-    assert @user.following?(@other_user)
-
-    @user.unfollow(@other_user)
-    assert_not @user.following?(@other_user)
+  test "unfollow and following?" do
+    assert @bob.following?(@alice)
+    @bob.unfollow(@alice)
+    assert_not @bob.following?(@alice)
   end
 end
