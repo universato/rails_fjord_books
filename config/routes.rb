@@ -3,8 +3,13 @@
 Rails.application.routes.draw do
   root to: "books#index"
   devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks", registrations: "users/registrations", sessions: "users/sessions" }
-  resources :books
+  resources :books do
+    resources :comments, only: [:create, :destroy]
+  end
   resources :users, only: [:index, :show, :destroy]
+  resources :reports do
+    resources :comments, only: [:create, :destroy]
+  end
   resources :users do
     member do
       get :following, :followers

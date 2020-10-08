@@ -26,7 +26,6 @@
     <%= link_to t(:users_index, scope: %i[dictionary button]), users_url %>  <br>　<br>  
 
     <% if user_signed_in? %>
-
       <%= link_to t(:logout, scope: %i[dictionary button]), destroy_user_session_url, method: :delete %>
       <%= link_to t(:users_edit, scope: %i[dictionary button]), edit_user_registration_url %>
     <% else %>

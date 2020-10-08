@@ -1,27 +1,19 @@
-<h1><%= t(".title") %></h1>
+<h1>日報の詳細画面</h1>
 
-<p>
-<strong><%= Book.human_attribute_name(:title) %>:</strong>
-  <%= @book.title %>
-</p>
+<article>
+  <h2><%= @report.title %></h2>
+  <%= @report.reported_on %> <br>
+  <%= @report.body %>
+</article>
 
-<p>
-  <strong><%= Book.human_attribute_name(:memo) %>:</strong>
-  <%= @book.memo %>
-</p>
+<br>
 
-<p>
-  <strong><%= Book.human_attribute_name(:author) %>:</strong>
-  <%= @book.author %>
-</p>
+<% if user_signed_in? && current_user == @report.user %>
+  <%= link_to "日報を編集する", edit_report_url(@report) %>
+  <%= link_to "日報を削除する", @report, method: :delete, data: { confirm: t(:delete, scope: %i[confirm]) } %>
+<% end %>
 
-<p>
-  <strong><%= Book.human_attribute_name(:picture) %>:</strong>
-  <%= image_tag(@book.picture_url) if @book.picture.present? %>
-</p>
-
-<%= link_to t(:edit,  scope: %i[dictionary button]), edit_book_path(@book) %> |
-<%= link_to t(:index, scope: %i[dictionary button]), books_path %>
+<br> <br>
 
 <% if @comments.empty? %>
   <p>コメントはありません。</p>
@@ -45,11 +37,11 @@
 <br> <br>
 
 <% if user_signed_in? %>
-  <%= form_with model: [@book, @book.comments.build] do |f| %>
+  <%= form_with model: [@report, @report.comments.build] do |f| %>
     <div class="form-group">
         <%= f.label :body, 'コメント内容' %>
         <%= f.text_area :body, class: 'form-control', rows: 3 %>
-        <%= f.hidden_field :book_id, value: @book.id %>
+        <%= f.hidden_field :report_id, value: @report.id %>
     </div>
     <%= f.submit '投稿', class: 'btn btn-info btn-block' %>
   <% end %>
