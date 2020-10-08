@@ -26,4 +26,20 @@ class UserTest < ActiveSupport::TestCase
     @bob.unfollow(@alice)
     assert_not @bob.following?(@alice)
   end
+
+  test "from_omniauth" do
+    email = "githubnewuser@example.com"
+    auth = OmniAuth::AuthHash.new({
+          provider: "github",
+          uid: "123456789",
+          info: {
+                  email: email,
+                  # pasword: "password"
+                },
+        })
+
+    user = User.from_omniauth(auth)
+    assert user.valid?
+    assert_equal email, user.email
+  end
 end
