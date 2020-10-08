@@ -27,7 +27,7 @@ class UserTest < ActiveSupport::TestCase
     assert_not @bob.following?(@alice)
   end
 
-  test "from_omniauth" do
+  test "from_omniauth_method" do
     provider = "github"
     uid      = "123456789"
     email    = "githubnewuser@example.com"
