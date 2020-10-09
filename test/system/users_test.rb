@@ -38,6 +38,8 @@ class UsersTest < ApplicationSystemTestCase
 
     click_on "フォローする"
     click_on "フォロー解除する"
+    click_on "フォローする"
+    assert_text "ユーザー詳細画面"
   end
 
   test "login and edit user data" do
