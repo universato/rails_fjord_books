@@ -30,7 +30,7 @@ class UsersTest < ApplicationSystemTestCase
     visit root_path
 
     click_on "ログイン"
-    sleep(1)
+    sleep(0.25) # wait for login.
     click_on "ユーザーの一覧"
 
     click_on "詳細画面へ", match: :first
