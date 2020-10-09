@@ -20,6 +20,7 @@ class UsersTest < ApplicationSystemTestCase
 
     click_on "ログイン"
     assert_selector "h1", text: "書籍"
+    assert_text "認証に成功しました"
 
     click_on "ログアウト"
     assert_selector "h1", text: "書籍"
@@ -30,7 +31,8 @@ class UsersTest < ApplicationSystemTestCase
     visit root_path
 
     click_on "ログイン"
-    sleep(0.25) # wait for login.
+    assert_text "認証に成功しました"
+
     click_on "ユーザーの一覧"
 
     click_on "詳細画面へ", match: :first
@@ -46,7 +48,7 @@ class UsersTest < ApplicationSystemTestCase
     visit root_path
 
     click_on "ログイン"
-    assert_selector "h1", text: "書籍"
+    assert_text "認証に成功しました"
 
     click_on "プロフィール編集"
     assert_text "githubmock@example.com"
