@@ -6,6 +6,7 @@ class UserRelationsController < ApplicationController
     current_user.follow(user)
     redirect_to user_path(user)
   end
+
   def destroy
     user = UserRelation.find(params[:id]).followed
     current_user.unfollow(user)
