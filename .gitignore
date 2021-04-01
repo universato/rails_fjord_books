@@ -45,3 +45,5 @@ yarn-debug.log*
 /storage
 
 .DS_Store
+
+/vendor

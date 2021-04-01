@@ -13,6 +13,8 @@ gem "sqlite3", "~> 1.4"
 gem "puma", "~> 4.1"
 # Use SCSS for stylesheets
 gem "sass-rails", ">= 6"
+# gem "sassc-rails"
+
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem "webpacker", "~> 4.0"
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -58,7 +60,7 @@ gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "carrierwave"
 gem "kaminari"
 gem "rails-i18n"
-gem "devise"
+gem "devise", :github => 'heartcombo/devise', :branch => 'master'
 gem "devise-i18n"
 gem "omniauth-github"
 gem "dotenv-rails"
